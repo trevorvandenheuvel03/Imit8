@@ -1,9 +1,6 @@
 const { ethers } = require("ethers");
+require('dotenv').config();
 
-// Custom L1 setup
-const RPC_URL = "https://subnets.avacloud.io/f42c253d-a0d9-4326-b568-2ea514391459"; // Replace with your custom L1 RPC URL
-const CONTRACT_ADDRESS = "0x3e411e0ae0484ae34127776b04550e6c985dc605"; // Replace with your deployed contract address
-const PRIVATE_KEY = ""; // Replace with your wallet's private key
 
 const ABI = [
   "function deposit() external payable",
@@ -13,6 +10,14 @@ const ABI = [
 ];
 
 async function sendAVAX(recipient, amount) {
+  const RPC_URL = process.env.RPC_URL;
+  const CONTRACT_ADDRESS = process.env.CONTRACT_ADDRESS;
+  const PRIVATE_KEY = process.env.PRIVATE_KEY;
+
+  if (!RPC_URL || !CONTRACT_ADDRESS || !PRIVATE_KEY) {
+    throw new Error("Missing required environment variables");
+  }
+  
   try {
     console.log("Connecting to provider...");
     const provider = new ethers.providers.JsonRpcProvider(RPC_URL);
