@@ -1,10 +1,9 @@
-# Imit8 - A SocialFi dApp on Avalanche L1
-Live on: https://imit8.vercel.app/
+# Imit8 - A SocialFi dApp on Avalanche
+
 ## Project Description
+Imit8 is a dApp built on a custom Avalanche L1 blockchain. The platform leverages blockchain technology to gamify user interactions by assigning ratings to users based on imitating given emojis. The dApp rewards users with native tokens (IMIT) for participation. 
 
-Imit8 is a decentralized application (dApp) built on a custom Avalanche L1 blockchain. The platform leverages blockchain technology to gamify user interactions by assigning ratings to users based on imitating given emojis. The dApp rewards users with native tokens (IMIT) for participation. 
-
-The aim for Imit8 is to be a SocialFi platform, where users have their picture taken to imitate a given emoji in order to elevate their mood. An ML model evaluates their performance and assigns a rating out of 5. Based on this score, users are rewarded with tokens. The user's photo is posted on the social wall, adding a social element to the platform, gamifying the experience, and enabling friendly competition.
+The aim for Imit8 is to be a SocialFi platform, where users have their picture taken to imitate a given emoji in order to elevate their mood. An ML model evaluates their performance and assigns a rating out of 5. Based on this score, users are rewarded with tokens. The user's photo is posted on the social wall, adding a social element to the platform, gamifying the experience, and enabling friendly banter & cpmpetition.
 
 ## Technical Overview
 
@@ -18,7 +17,7 @@ The aim for Imit8 is to be a SocialFi platform, where users have their picture t
 1. **Wallet Integration**: Users can connect their wallets to interact with the Imit8 platform.
 2. **Custom L1 Integration**: The platform operates on a custom Avalanche L1, ensuring low-cost and fast transactions.
 3. **Emoji Imitation Game**: Users imitate emojis, and their performance is rated by an ML model.
-4. **Social Wall**: User photos are displayed on a social wall to promote engagement and friendly competition.
+4. **Social Wall**: User photos are displayed on a social wall to promote engagement and friendly banter.
 5. **Token Rewards**: IMIT tokens are rewarded based on user performance, adding a financial incentive to the gamified experience.
 
 ## How to Get Started
@@ -26,7 +25,7 @@ The aim for Imit8 is to be a SocialFi platform, where users have their picture t
 1. Clone the repository:
    ```bash
    git clone https://github.com/Pravesh-mansharamani/Imit8.git
-   cd Imit8
+   cd Imit8/frontend
    ```
 
 2. Install dependencies:
@@ -36,7 +35,7 @@ The aim for Imit8 is to be a SocialFi platform, where users have their picture t
 
 3. Start the development server:
    ```bash
-   npm start
+   npm run dev
    ```
 
 4. Deploy the smart contract on your custom L1 devnet using Remix IDE or Hardhat.

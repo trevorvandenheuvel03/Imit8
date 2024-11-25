@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
-import { Camera, RefreshCw, Scan, Wallet } from 'lucide-react';
+import { Camera, RefreshCw, Scan, Wallet, Sparkles } from 'lucide-react';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Button } from '@/components/ui/button';
 import * as faceapi from 'face-api.js';
@@ -502,6 +502,31 @@ const EmotionGame = ({ userWallet }) => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-purple-100 to-pink-100 p-4 flex items-center justify-center">
       <div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-md mx-auto backdrop-blur-sm bg-opacity-90">
+      <div className="mb-8 text-center">
+          <h2 className="text-2xl font-bold text-purple-800 mb-4">How to Play & Win! 🎮</h2>
+          <div className="space-y-4">
+            <div className="flex items-center gap-3 text-left">
+              <div className="bg-purple-100 p-2 rounded-full">
+                <Wallet className="w-5 h-5 text-purple-600" />
+              </div>
+              <p className="text-gray-700">1. Connect your wallet (you're already crushing it! 🎉)</p>
+            </div>
+            <div className="flex items-center gap-3 text-left">
+              <div className="bg-purple-100 p-2 rounded-full">
+                <Camera className="w-5 h-5 text-purple-600" />
+              </div>
+              <p className="text-gray-700">2. Hit that camera button & make your best emoji face in 3 secs! 🤪</p>
+            </div>
+            <div className="flex items-center gap-3 text-left">
+              <div className="bg-purple-100 p-2 rounded-full">
+                <Sparkles className="w-5 h-5 text-purple-600" />
+              </div>
+              <p className="text-gray-700">3. Score high = more IMIT tokens in your wallet & refresh to see yourself on the wall! ⭐</p>
+            </div>
+          </div>
+        </div>
+
+        
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-3xl font-bold text-purple-800">Imit8</h1>
           <div className="flex items-center gap-2 text-sm text-gray-600">
