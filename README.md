@@ -1,8 +1,7 @@
 # Imit8 - A SocialFi dApp on Avalanche
 <div align="center">
   <a href="https://www.loom.com/share/5c4c813f9b7b4301beb090d4af0acf8b">
-    <iframe width="640" height="360" src="https://www.loom.com/embed/5c4c813f9b7b4301beb090d4af0acf8b" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-    </iframe>
+    <img width="640" height="360" src="https://cdn.loom.com/sessions/thumbnails/5c4c813f9b7b4301beb090d4af0acf8b-with-play.gif">
   </a>
 </div>
 
