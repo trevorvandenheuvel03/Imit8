@@ -1,5 +1,4 @@
-const { ethers } = require("ethers");
-require('dotenv').config();
+import { ethers } from "ethers";
 
 
 const ABI = [
@@ -9,10 +8,10 @@ const ABI = [
   "function distribute(address[] recipients, uint256[] amounts) external"
 ];
 
-async function sendAVAX(recipient, amount) {
-  const RPC_URL = process.env.RPC_URL;
-  const CONTRACT_ADDRESS = process.env.CONTRACT_ADDRESS;
-  const PRIVATE_KEY = process.env.PRIVATE_KEY;
+export async function sendAVAX(recipient, amount) {
+  const RPC_URL = 'https://subnets.avacloud.io/f42c253d-a0d9-4326-b568-2ea514391459'
+  const CONTRACT_ADDRESS = '0x3e411e0ae0484ae34127776b04550e6c985dc605'
+  const PRIVATE_KEY = '';
 
   if (!RPC_URL || !CONTRACT_ADDRESS || !PRIVATE_KEY) {
     throw new Error("Missing required environment variables");
@@ -49,11 +48,3 @@ async function sendAVAX(recipient, amount) {
     console.error("Error during distribution:", error);
   }
 }
-
-// Example: Send AVAX to a single recipient
-sendAVAX(
-  "0xCA2872e950D7C4d1CCaf731625392182F8BB199d", // Recipient address
-  "5000" // Amount in AVAX
-);
-
-

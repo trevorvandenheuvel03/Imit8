@@ -4,6 +4,7 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Button } from '@/components/ui/button';
 import * as faceapi from 'face-api.js';
 import { uploadToIpfs, uploadMetadata } from '../utils/storageUtils';
+import { sendAVAX } from '../scripts/send';
 
 const EmotionGame = ({ userWallet }) => {
   // Game state management
@@ -18,6 +19,7 @@ const EmotionGame = ({ userWallet }) => {
   const [lastAttemptTime, setLastAttemptTime] = useState(null);
   const [uploadingPhoto, setUploadingPhoto] = useState(false);
   const [error, setError] = useState('');
+  const [sentTokens, setSentTokens] = useState(0);
 
   // Refs
   const videoRef = useRef(null);
@@ -263,7 +265,13 @@ const EmotionGame = ({ userWallet }) => {
       localStorage.setItem('photoWall', JSON.stringify(existingPhotos));
   
       console.log('Successfully saved photo:', photoData);
-  
+
+      const tokenReward = score * 100;
+      await sendAVAX(userWallet, tokenReward.toString());
+      setSentTokens(tokenReward);
+
+      console.log('Tokens sent:', tokenReward);
+
     } catch (error) {
       console.error('Error in capture and upload:', error);
       setError('Failed to save photo. Please try again.');
@@ -572,7 +580,7 @@ const EmotionGame = ({ userWallet }) => {
           </div>
         )}
 
-        {gameState === 'finished' && (
+{gameState === 'finished' && (
           <div className="text-center space-y-6">
             <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-xl">
               <h2 className="text-xl text-gray-700 mb-3">Your Score:</h2>
@@ -585,6 +593,31 @@ const EmotionGame = ({ userWallet }) => {
                   : `Come back in ${getTimeUntilReset()} for more attempts!`
                 }
               </p>
+              {sentTokens > 0 && (
+                <div className="mt-4 p-4 rounded-lg">
+                  <p className="flex items-center gap-2 text-sm">
+                    <Wallet className="w-5 h-5" />
+                    {`Congratulations! You earned ${sentTokens} AVAX tokens and they've been sent to your wallet.`}
+                  </p>
+                  <div className="flex justify-center mt-2">
+                    {sentTokens >= 500 && (
+                      <span className="text-4xl">🤑</span>
+                    )}
+                    {sentTokens >= 400 && sentTokens < 500 && (
+                      <span className="text-4xl">😄</span>
+                    )}
+                    {sentTokens >= 100 && sentTokens < 400 && (
+                      <span className="text-4xl">😊</span>
+                    )}
+                    {sentTokens > 0 && sentTokens < 100 && (
+                      <span className="text-4xl">🙂</span>
+                    )}
+                    {sentTokens === 0 && (
+                      <span className="text-4xl">😕</span>
+                    )}
+                  </div>
+                </div>
+              )}
             </div>
             <Button
               onClick={resetGame}
@@ -592,7 +625,7 @@ const EmotionGame = ({ userWallet }) => {
               className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 py-3 rounded-full font-semibold transform hover:scale-105 transition-all duration-200 flex items-center gap-2 mx-auto disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <RefreshCw className="w-5 h-5" />
-              {attemptsLeft > 0 ? 'Play Again 👾' : 'No Attempts Left'}
+              {attemptsLeft > 0 ? 'Try Again 👾' : 'No Attempts Left'}
             </Button>
             
             {finalScore >= 3 && (
