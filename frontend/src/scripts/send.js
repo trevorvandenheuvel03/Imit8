@@ -1,4 +1,6 @@
 import { ethers } from "ethers";
+import dotenv from 'dotenv';
+dotenv.config();
 
 
 const ABI = [
@@ -11,7 +13,7 @@ const ABI = [
 export async function sendAVAX(recipient, amount) {
   const RPC_URL = 'https://subnets.avacloud.io/f42c253d-a0d9-4326-b568-2ea514391459'
   const CONTRACT_ADDRESS = '0x3e411e0ae0484ae34127776b04550e6c985dc605'
-  const PRIVATE_KEY = '';
+  const PRIVATE_KEY = process.env.PRIVATE_KEY;
 
   if (!RPC_URL || !CONTRACT_ADDRESS || !PRIVATE_KEY) {
     throw new Error("Missing required environment variables");
