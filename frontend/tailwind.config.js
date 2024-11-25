@@ -1,11 +1,14 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        paytone: ["'Paytone One'", "sans-serif"]
+      }
+    },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [],
 }
