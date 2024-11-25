@@ -1,6 +1,13 @@
 # Imit8 - A SocialFi dApp on Avalanche
 
-<iframe width="640" height="416" src="https://www.loom.com/embed/5c4c813f9b7b4301beb090d4af0acf8b?sid=46e80348-ce8f-4914-9978-cd466d7f92c0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<div>
+    <a href="https://www.loom.com/share/5c4c813f9b7b4301beb090d4af0acf8b">
+      <p>Imitate: Expressing Emotions through Emojis - Watch Video</p>
+    </a>
+    <a href="https://www.loom.com/share/5c4c813f9b7b4301beb090d4af0acf8b">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/5c4c813f9b7b4301beb090d4af0acf8b-dc2c529cfcefacd7-full-play.gif">
+    </a>
+  </div>
 
 ## Project Description
 Imit8 is a dApp built on a custom Avalanche L1 blockchain. The platform leverages blockchain technology to gamify user interactions by assigning ratings to users based on imitating given emojis. The dApp rewards users with native tokens (IMIT) for participation. 
