@@ -18,7 +18,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "dotenv": "^16.4.5",
-    "ethers": "^6.13.4",
+    "ethers": "5.4",
     "face-api.js": "^0.22.2",
     "framer-motion": "^11.11.17",
     "lucide-react": "^0.460.0",
