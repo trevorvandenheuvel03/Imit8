@@ -1,5 +1,5 @@
 # Imit8 - A SocialFi dApp on Avalanche
-
+Live on : https://imit8.vercel.app/
 ## Project Description
 Imit8 is a dApp built on a custom Avalanche L1 blockchain. The platform leverages blockchain technology to gamify user interactions by assigning ratings to users based on imitating given emojis. The dApp rewards users with native tokens (IMIT) for participation. 
 
