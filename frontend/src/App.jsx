@@ -5,7 +5,7 @@ import WalletConnection from './components/WalletConnection';
 import PhotoWall from './components/PhotoWall';
 import FunHeader from './components/FunHeader';
 
-const clientId = "9407d81e31b2a1f968068fa68fccb769";
+const clientId = import.meta.env.VITE_CLIENT_ID;
 
 function App() {
   const [isWalletConnected, setIsWalletConnected] = useState(false);

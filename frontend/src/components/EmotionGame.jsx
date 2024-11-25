@@ -28,7 +28,7 @@ const EmotionGame = ({ userWallet }) => {
   const scoresRef = useRef([]);
   const canvasRef = useRef(null);
 
-  const clientId = "9407d81e31b2a1f968068fa68fccb769";
+  const clientId = import.meta.env.VITE_CLIENT_ID;
 
   const emojiMap = {
     '😀': {
@@ -597,7 +597,7 @@ const EmotionGame = ({ userWallet }) => {
                 <div className="mt-4 p-4 rounded-lg">
                   <p className="flex items-center gap-2 text-sm">
                     <Wallet className="w-5 h-5" />
-                    {`Congratulations! You earned ${sentTokens} AVAX tokens and they've been sent to your wallet.`}
+                    {`Congratulations! You earned ${sentTokens} IMIT tokens and they've been sent to your wallet.`}
                   </p>
                   <div className="flex justify-center mt-2">
                     {sentTokens >= 500 && (
