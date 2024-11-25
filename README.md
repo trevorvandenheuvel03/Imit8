@@ -1,8 +1,8 @@
 # Imit8 - A SocialFi dApp on Avalanche
 
-<div>
+<div align="center">
     <a href="https://www.loom.com/share/5c4c813f9b7b4301beb090d4af0acf8b">
-      <p>Imitate: Expressing Emotions through Emojis - Watch Video</p>
+      <p>Imit8: Expressing Emotions through Emojis - Watch Demo</p>
     </a>
     <a href="https://www.loom.com/share/5c4c813f9b7b4301beb090d4af0acf8b">
       <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/5c4c813f9b7b4301beb090d4af0acf8b-dc2c529cfcefacd7-full-play.gif">
