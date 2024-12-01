@@ -21,7 +21,7 @@ The aim for Imit8 is to be a SocialFi platform, where users have their picture t
 - **Frontend**: Built with React.js, the frontend enables users to interact with the platform by connecting their wallets, adding the custom network, and participating in the emoji imitation game.
 - **Backend with ML Integration**: The backend leverages a machine learning model to evaluate user-submitted photos and assign ratings based on how closely they imitate the given emoji.
 
-## Features
+## Features:
 
 1. **Wallet Integration**: Users can connect their wallets to interact with the Imit8 platform.
 2. **Custom L1 Integration**: The platform operates on a custom Avalanche L1, ensuring low-cost and fast transactions.
