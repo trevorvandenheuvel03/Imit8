@@ -63,3 +63,4 @@ The aim for Imit8 is to be a SocialFi platform, where users have their picture t
 - **OpenZeppelin** for smart contract standards.
 - **React.js** for frontend development.
 - **Machine Learning** for gamified photo evaluations.
+- #hi 
